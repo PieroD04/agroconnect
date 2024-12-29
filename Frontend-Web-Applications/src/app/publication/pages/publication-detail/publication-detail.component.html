@@ -1,0 +1,24 @@
+<main>
+  <div class="card">
+    <mat-card class="example-card" aria-label="Información de publicación de asesor">
+      <div class="example-header-image" role="article">
+        <img mat-card-image src="{{publication.image}}" alt="{{publication.title}}">
+      </div>
+      <mat-card-content class="container">
+        <h2>{{publication.title}}</h2>
+        <p>{{publication.description}}</p>
+        <p>Publicado el {{publication.date | date: 'dd/MM/yy'}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="botones">
+    <button mat-flat-button class="boton" style="background-color: #e19669; color: white;" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Volver
+    </button>
+    <button mat-flat-button color="warn" class="boton" style="background-color: #CF411A; color: white;" (click)="deletePublication(publication.id)">
+      <mat-icon>delete</mat-icon>
+      Eliminar
+    </button>
+  </div>
+</main>

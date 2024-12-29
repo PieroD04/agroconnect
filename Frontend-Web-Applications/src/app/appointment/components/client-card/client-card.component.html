@@ -1,0 +1,21 @@
+<mat-card class="row" aria-label="Información de cliente pendiente de cita">
+  <div class="col">
+    <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-appointment.png?alt=media&token=96a10302-2750-4ef2-9212-c9ce3f16b2a2" alt="Imagen de cuy cita">
+  </div>
+  <mat-card-header class="col">
+    <mat-card-title>
+      Cita con {{ client.fullname }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="col">
+    <p>Estado: {{client.appointmentStatus}}</p>
+    <button mat-flat-button style="background-color: #91654E;; color: #FFFFFF; margin-bottom:5px" (click)="goToAppointment(client.appointmentId)">Ver más</button>
+    <button mat-flat-button
+            [style.backgroundColor]="client.appointmentStatus === 'TERMINADO' ? '#B1B1B1AA' : '#7EC306'"
+            [disabled]="client.appointmentStatus === 'TERMINADO'"
+            style="color: #FFFFFF; text-align: center; line-height: 1;"
+            (click)="finishAppointment()">
+      Terminar Cita
+    </button>
+  </mat-card-content>
+</mat-card>

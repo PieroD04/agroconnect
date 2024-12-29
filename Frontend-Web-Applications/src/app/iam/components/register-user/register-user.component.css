@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.register-user {
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #DD763D;
+  font-size: 2rem;
+}
+
+.mat-card-content {
+  margin-top: 20px;
+}
+
+.roles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.role {
+  text-align: center;
+}
+
+.role p{
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.role-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DD763D;
+}
+
+.login {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: #000000;
+}

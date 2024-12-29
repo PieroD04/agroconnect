@@ -1,0 +1,83 @@
+# Ignore rules for the Frontend (Frontend-Web-Applications)
+
+# Compiled output
+Frontend-Web-Applications/dist
+Frontend-Web-Applications/tmp
+Frontend-Web-Applications/out-tsc
+Frontend-Web-Applications/bazel-out
+
+# Node
+Frontend-Web-Applications/node_modules
+Frontend-Web-Applications/npm-debug.log
+Frontend-Web-Applications/yarn-error.log
+
+# IDEs and editors
+Frontend-Web-Applications/.idea/
+Frontend-Web-Applications/.project
+Frontend-Web-Applications/.classpath
+Frontend-Web-Applications/.c9/
+Frontend-Web-Applications/*.launch
+Frontend-Web-Applications/.settings/
+Frontend-Web-Applications/*.sublime-workspace
+
+# Visual Studio Code
+Frontend-Web-Applications/.vscode/*
+!Frontend-Web-Applications/.vscode/settings.json
+!Frontend-Web-Applications/.vscode/tasks.json
+!Frontend-Web-Applications/.vscode/launch.json
+!Frontend-Web-Applications/.vscode/extensions.json
+Frontend-Web-Applications/.history/*
+
+# Miscellaneous
+Frontend-Web-Applications/.angular/cache
+Frontend-Web-Applications/.sass-cache/
+Frontend-Web-Applications/connect.lock
+Frontend-Web-Applications/coverage
+Frontend-Web-Applications/libpeerconnection.log
+Frontend-Web-Applications/testem.log
+Frontend-Web-Applications/typings
+Frontend-Web-Applications/src/environments/environment.ts
+
+# System files
+Frontend-Web-Applications/.DS_Store
+Frontend-Web-Applications/Thumbs.db
+Frontend-Web-Applications/.firebase/hosting.ZGlzdFxmcm9udGVuZC13ZWItYXBwbGljYXRpb25zXGJyb3dzZXI.cache
+Frontend-Web-Applications/.firebase
+
+# Local Netlify folder
+Frontend-Web-Applications/.netlify
+
+# Ignore rules for the Backend (Web-Services)
+!Web-Services/.mvn/wrapper/maven-wrapper.jar
+
+# Compiled output
+Web-Services/target/
+
+### STS ###
+Web-Services/.apt_generated
+Web-Services/.classpath
+Web-Services/.factorypath
+Web-Services/.project
+Web-Services/.settings
+Web-Services/.springBeans
+Web-Services/.sts4-cache
+
+### IntelliJ IDEA ###
+Web-Services/.idea
+Web-Services/*.iws
+Web-Services/*.iml
+Web-Services/*.ipr
+
+### NetBeans ###
+Web-Services/nbproject/private/
+Web-Services/nbbuild/
+Web-Services/dist/
+Web-Services/nbdist/
+Web-Services/.nb-gradle/
+Web-Services/build/
+!Web-Services/**/src/main/**/build/
+!Web-Services/**/src/test/**/build/
+
+### VS Code ###
+Web-Services/.vscode/
+

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="subtitle">
+    <h2>Registrar Gasto</h2>
+  </div>
+  <div class="group-inputs">
+    <mat-form-field class="form-field">
+      <mat-label>Nombre del gasto</mat-label>
+      <input matInput [(ngModel)]="expense.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Monto gastado S/.</mat-label>
+      <input matInput type="number" [(ngModel)]="expense.amount" name="amount">
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="expense.type">
+      <h2 style="font-weight: 400">Tipo de gasto</h2>
+      <mat-radio-button value="SALUD">Salud</mat-radio-button>
+      <mat-radio-button value="ALIMENTO">Alimento</mat-radio-button>
+      <mat-radio-button value="MANTENIMIENTO">Mantenimiento de criadero</mat-radio-button>
+      <mat-radio-button value="OTROS">Otros</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="form-field">
+      <mat-label>Detalles (en caso haya seleccionado "otro")</mat-label>
+      <input matInput [(ngModel)]="expense.observations" name="observations">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Fecha de gasto</mat-label>
+      <input matInput type="date" [(ngModel)]="expense.date" name="date">
+    </mat-form-field>
+  </div>
+  <div class="group-btns">
+    <button class="back-button" mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button"  aria-label="descartar cambios"  mat-button (click)="goBack()">
+      <mat-icon>close</mat-icon>
+      Descartar
+    </button>
+    <button class="register-button" mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" (click)="handleClick()">
+      <mat-icon>save</mat-icon>
+      Registrar
+    </button>
+  </div>
+</div>

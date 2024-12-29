@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="subtitle">
+    <h2>Registrar nueva jaula</h2>
+  </div>
+  <div class="group-inputs">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Jaula 6" [(ngModel)]="cage.name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Tamaño (m^3)</mat-label>
+      <input type="number" matInput placeholder="5" [(ngModel)]="cage.size">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Observaciones</mat-label>
+      <textarea matInput placeholder="Observations" [(ngModel)]="cage.observations"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="group-btns">
+    <button class="back-button" mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button"  aria-label="descartar cambios"  mat-button (click)="goBack()">
+      <mat-icon>close</mat-icon>
+      Descartar
+    </button>
+    <button class="register-button" mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" (click)="handleClick()">
+      <mat-icon>save</mat-icon>
+      Registrar
+    </button>
+  </div>
+
+</div>

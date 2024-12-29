@@ -1,0 +1,53 @@
+main {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  background-color: #dd763d;
+  color: white;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+
+}
+button {
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+@media (max-width: 450px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}

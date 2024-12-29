@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Listado de cuyes</h1>
+  <h1>de {{cageName}}</h1>
+  <div class="no-animals" *ngIf="animals.length === 0">
+    <h2>No se han encontrado animales</h2>
+  </div>
+  <div class="animals">
+    <animal-card *ngFor="let animal of animals" [animal]="animal"></animal-card>
+  </div>
+</div>
+
+<div class="back">
+
+  <button mat-raised-button class="back-button" style="background-color: #e19669; color: white;" aria-label="Boton de retroceso" (click)="goBack()">
+    <mat-icon aria-label="flecha de retroceso">arrow_back</mat-icon>
+    Volver
+  </button>
+</div>
+<div class="register">
+  <button mat-raised-button class="register-button" style="padding: 20px; background-color: #7ec306; color: white;"  (click)="createAnimal()">
+    <mat-icon aria-label="simbolo de suma">add</mat-icon>
+    Nuevo cuy
+  </button>
+</div>

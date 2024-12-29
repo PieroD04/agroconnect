@@ -1,0 +1,89 @@
+.container{
+  margin-top: 64px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: calc(100vh - 128px);
+}
+
+h1{
+  margin: 128px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #DD763D;
+}
+
+h2{
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #DD763D;
+}
+
+.form{
+  width: 60%;
+  margin: 0 auto;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 50%;
+}
+
+.buttons button{
+  width: 200px;
+  height: 50px;
+}
+
+.image{
+  text-align: center;
+}
+
+.image img{
+  width: 400px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 35px;
+}
+
+.register-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 35px;
+}
+
+@media screen and (max-width: 1400px)
+{
+  .form{
+    width: 90%;
+  }
+
+  .image img{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .buttons button{
+    font-size: 12px;
+  }
+  .buttons{
+    gap: 10%;
+  }
+}

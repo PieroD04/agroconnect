@@ -1,0 +1,99 @@
+<div class="container">
+  <h1>Información sobre el Cuy</h1>
+  <div class="form-container">
+    <div class="return">
+      <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy.png?alt=media&token=0d551f4d-f295-4dfa-bd22-74dd0bd16359" alt="cuy {{animal.id}}">
+      <button mat-raised-button class="back-button" style="background-color: #e19669; color: white;" aria-label="Boton de retroceso" (click)="goBack()">
+        <mat-icon aria-label="flecha de retroceso">arrow_back</mat-icon>
+        Volver
+      </button>
+    </div>
+
+    <div class="form">
+      <form (submit)="onSubmit()" #animalForm = "ngForm" aria-label="Formulario de información de un cuy">
+        <mat-form-field>
+          <mat-label>ID</mat-label>
+          <input matInput placeholder="ID de cuy" name="animalID" [(ngModel)]="animal.id" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Nombre del cuy</mat-label>
+          <input matInput placeholder="Nombre del cuy" name="animalName" [disabled]="!isEditMode" [(ngModel)]="animal.name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Raza</mat-label>
+          <mat-select name="animalBreed" [disabled]="!isEditMode" [(ngModel)]="animal.breed" required>
+            <mat-option value="ANDINA">Andina</mat-option>
+            <mat-option value="INTI">Inti</mat-option>
+            <mat-option value="PERU">Perú</mat-option>
+            <mat-option value="KURI">Kuri</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Género</mat-label>
+          <mat-select name="animalGender" aria-label="seleccionador de genero" [disabled]="!isEditMode" [(ngModel)]="gender" required>
+            <mat-option value="true">Macho</mat-option>
+            <mat-option value="false">Hembra</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input matInput type="date" placeholder="Fecha de nacimiento"  name="animalBirthdate" [disabled]="!isEditMode" [(ngModel)]="animal.birthdate" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>ID de la jaula</mat-label>
+          <input matInput type="number" placeholder="ID de la jaula" name="animalCageId" [(ngModel)]="animal.cageId" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Peso (kg)</mat-label>
+          <input matInput type="number" placeholder="Peso" name="animalWeight" [disabled]="!isEditMode" [(ngModel)]="animal.weight" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Estado</mat-label>
+          <mat-select name="animalStatus" aria-label="seleccionador de estado" [disabled]="!isEditMode" [(ngModel)]="isSick" required>
+            <mat-option value="false">Saludable</mat-option>
+            <mat-option value="true">Enfermo</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Observaciones</mat-label>
+          <textarea matInput rows="5"
+                    placeholder="Observaciones" name="animalObservations" [disabled]="!isEditMode" [(ngModel)]="animal.observations">
+      </textarea>
+        </mat-form-field>
+
+        <div class="buttons">
+          @if(isEditMode){
+            <div class="edit-buttons">
+              <button mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button" aria-label="Descartar cambios" (click)="onCancel()">
+                <mat-icon>close</mat-icon>
+                Descartar
+              </button>
+              <button mat-raised-button style="background-color: #7ec306; color: white;" type="submit" aria-label="Guardar">
+                <mat-icon>save</mat-icon>
+                Guardar
+              </button>
+            </div>
+          }
+          @else {
+            <button mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" type="button" aria-label="Editar información" (click)="editAnimal()">
+              <mat-icon>edit</mat-icon>
+              Editar
+            </button>
+            <button mat-raised-button color="warn" type="button" aria-label="Eliminar" (click)="deleteAnimal()">
+              <mat-icon>delete</mat-icon>
+              Eliminar
+            </button>
+          }
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

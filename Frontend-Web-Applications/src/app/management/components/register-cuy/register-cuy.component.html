@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="subtitle">
+    <h2>Registrar nuevo cuy</h2>
+  </div>
+  <div class="group-inputs">
+    <mat-form-field>
+      <mat-label>Nombre del cuy</mat-label>
+      <input matInput placeholder="Nombre del cuy" name="animalName" [(ngModel)]="animal.name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Raza</mat-label>
+      <mat-select name="animalBreed" [(ngModel)]="animal.breed">
+        <mat-option value="ANDINA">Andina</mat-option>
+        <mat-option value="INTI">Inti</mat-option>
+        <mat-option value="PERU">Perú</mat-option>
+        <mat-option value="KURI">Kuri</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Género</mat-label>
+      <mat-select name="animalGender" aria-label="seleccionador de genero" [(ngModel)]="gender">
+        <mat-option value="true">Macho</mat-option>
+        <mat-option value="false">Hembra</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput type="date" placeholder="Fecha de nacimiento"  name="animalBirthdate" [(ngModel)]="animal.birthdate">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>ID de la jaula</mat-label>
+      <input matInput type="number" placeholder="ID de la jaula" name="animalCageId" [(ngModel)]="animal.cageId" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Peso (kg)</mat-label>
+      <input matInput type="number" placeholder="Peso" name="animalWeight" [(ngModel)]="animal.weight">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Estado</mat-label>
+      <mat-select name="animalStatus" aria-label="seleccionador de estado" [(ngModel)]="isSick">
+        <mat-option value=false>Saludable</mat-option>
+        <mat-option value=true>Enfermo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Observaciones</mat-label>
+      <textarea matInput rows="5"
+                placeholder="Observaciones" name="animalObservations" [(ngModel)]="animal.observations">
+      </textarea>
+    </mat-form-field>
+    <div class="group-btns">
+      <button class="back-button" mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button"  aria-label="descartar cambios"  mat-button (click)="goBack()">
+        <mat-icon>close</mat-icon>
+        Descartar
+      </button>
+      <button class="register-button" mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" (click)="handleClick()">
+        <mat-icon>save</mat-icon>
+        Registrar
+      </button>
+    </div>
+  </div>
+  <div class="image">
+    <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fminicuy.png?alt=media&token=c18e62bf-ac9a-435d-8782-145519eab8d9" alt="Imagen de un cuy pequeño">
+  </div>
+
+</div>

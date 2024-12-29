@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="side" (closedStart)="closeDrawer()">
+    <div class="sidenav">
+      <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let button of getSidebarButtons()">
+          <a class="sidenav-nav-link"
+             [routerLink]="getButtonRoute(button)"
+             routerLinkActive="active">
+            <span class="sidenav-link-text" @fadeInOut>{{ button }}</span>
+          </a>
+        </li>
+        <li class="sidenav-nav-item">
+          <a class="sidenav-nav-link" (click)="logOut()" routerLink="login">
+            <span class="sidenav-link-text" @fadeInOut>Cerrar sesión</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

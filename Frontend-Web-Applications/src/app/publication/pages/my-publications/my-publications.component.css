@@ -1,0 +1,50 @@
+main {
+  margin-top: 100px;
+  display: grid;
+  align-items: center;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.title-page {
+  color: #DD763D;
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 1;
+}
+
+h1 {
+  text-align: center;
+  margin: 2%;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+#cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.row {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.empty-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  #cards{
+    grid-template-columns: 1fr;
+  }
+}

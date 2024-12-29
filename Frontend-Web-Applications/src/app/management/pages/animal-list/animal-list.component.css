@@ -1,0 +1,128 @@
+.container{
+  margin-top: 100px;
+  min-height: calc(100vh - 100px);
+}
+
+h1{
+  font-family: Inter, sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #DD763D;
+}
+
+h2{
+  font-family: Inter, sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  color: #DD763D;
+}
+
+.animals{
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+
+  height: 50px;
+  margin-right: 25px;
+
+  border-radius: 35px;
+}
+
+.back {
+  position: fixed;
+  bottom: 20px;
+  right: 60%;
+  transform: translateX(50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+
+  height: 50px;
+  margin-right: 25px;
+
+  border-radius: 35px;
+}
+
+.register {
+  position: fixed;
+  bottom: 20px;
+  left: 60%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .back {
+    right: 70%;
+    transform: translateX(50%);
+  }
+
+  .register {
+    left: 70%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 900px){
+  .back-button{
+    padding: 20px 30px;
+    font-size: 20px;
+  }
+
+  .register-button{
+    padding: 20px 30px;
+    width: 200px;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .back {
+    right: 80%;
+    transform: translateX(50%);
+  }
+
+  .register {
+    left: 80%;
+    transform: translateX(-50%);
+  }
+
+  .back-button{
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  .register-button{
+    padding: 15px 20px;
+    width: 150px;
+    font-size: 18px;
+  }
+
+}
+
+
+
+

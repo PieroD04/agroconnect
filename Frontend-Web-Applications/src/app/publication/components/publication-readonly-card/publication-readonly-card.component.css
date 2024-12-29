@@ -1,0 +1,30 @@
+.publication-card {
+  max-width: 600px;
+  margin: 5% auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #f2e2a8;
+  color: #4F2F00;
+
+}
+mat-card-title{
+  color: #e19669;
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}

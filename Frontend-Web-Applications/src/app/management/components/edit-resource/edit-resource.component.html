@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="subtitle">
+    <h2>Editar Recurso</h2>
+    <div class="image">
+      <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fresources2.webp?alt=media&token=ba82d265-83a4-4248-bae7-26a539050739" alt="Resource icon">
+    </div>
+  </div>
+  <div class="group-inputs">
+    <mat-form-field class="form-field">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="resource.name" name="name">
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="resource.type">
+      <h2 style="font-weight: 400">Tipo de recurso</h2>
+      <mat-radio-button value="ALIMENTO">Alimento</mat-radio-button>
+      <mat-radio-button value="MEDICINA">Medicina</mat-radio-button>
+      <mat-radio-button value="CULTIVO">Cultivo</mat-radio-button>
+      <mat-radio-button value="OTROS">Otros</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="form-field">
+      <mat-label>Cantidad</mat-label>
+      <input matInput type="number" [(ngModel)]="resource.quantity" name="quantity">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Fecha</mat-label>
+      <input matInput type="date" [(ngModel)]="resource.date" name="date">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Observaciones</mat-label>
+      <textarea matInput [(ngModel)]="resource.observations" name="observations"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="group-btns">
+    <button class="back-button" mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" mat-button (click)="goBack()">
+      <mat-icon>close</mat-icon>
+      Descartar
+    </button>
+    <button class="register-button" mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" (click)="handleClick()">
+      <mat-icon>save</mat-icon>
+      Registrar
+    </button>
+  </div>
+</div>
+

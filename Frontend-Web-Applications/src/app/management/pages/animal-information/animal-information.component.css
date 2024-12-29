@@ -1,0 +1,154 @@
+h1{
+  margin: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #DD763D;
+}
+
+.container{
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+}
+
+.form-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.return{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  width: 360px;
+  height: 360px;
+}
+
+.form{
+  width: 80%;
+  margin: 0 auto;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.buttons button{
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.edit-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.edit-buttons button{
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.back-button{
+  padding: 25px 40px;
+  font-size: 24px;
+  border-radius: 35px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 35px;
+}
+
+.register-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 35px;
+}
+
+@media screen and (max-width: 1200px){
+  .form{
+    width: 90%;
+  }
+
+  img{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .edit-buttons button{
+    font-size: 15px;
+    width: 130px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .form-container{
+    grid-template-columns: 1fr;
+  }
+
+  .container .return{
+    order: 2;
+  }
+
+  .container .form{
+    order: 1;
+  }
+
+  .form{
+    width: 90%;
+  }
+
+  img{
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .buttons button{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .edit-buttons button{
+    font-size: 15px;
+    width: 100px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .edit-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

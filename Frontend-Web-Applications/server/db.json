@@ -1,0 +1,426 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "asesor@example.com",
+      "password": "12345678",
+      "fullname": "Marcus Smith",
+      "location": "Prolongación Primavera 2390, Santiago de Surco 15023",
+      "birthdate": "1990-05-15",
+      "description": "Veterinario especializado en roedores."
+    },
+    {
+      "id": 2,
+      "email": "emily22garcia@gmail.com",
+      "password": "tuRinconcito123#",
+      "fullname": "Emily Garcia",
+      "location": "012, La Molina",
+      "birthdate": "1995-08-20",
+      "description": "Zootecnista egresada de la UNALM apasiada amante de los cuyes."
+    },
+    {
+      "id": 3,
+      "email": "criador@example.com",
+      "password": "12345678",
+      "fullname": "Luis Lopez",
+      "location": "Avenida Circunvalación 125, Lurigancho-Chosica 15457",
+      "birthdate": "1998-02-17",
+      "description": "Principiante en la crianza de cuyes."
+    },
+    {
+      "id": 4,
+      "email": "mariajose1@yahoo.es",
+      "password": "cuyitos123#",
+      "fullname": "Maria Jose Perez",
+      "location": "Jr. Los Pinos 123, San Juan de Lurigancho 15494",
+      "birthdate": "1997-11-30",
+      "description": "Futura experta en la crianza de cuyes!!"
+    },
+    {
+      "id": 5,
+      "email": "marco85@hotmail.com",
+      "password": "marco123",
+      "fullname": "Marco Pérez",
+      "location": "Av. Primavera 2390 - Santiago de Surco",
+      "birthdate": "1990-12-20",
+      "description": "¡Me encanta la crianza de cuyes!"
+    },
+    {
+      "id": 6,
+      "email": "marimartinez019@gmail.com",
+      "password": "mariloba8901",
+      "fullname": "Maria Martinez",
+      "location": "Av. Los Incas 819, San Isidro",
+      "birthdate": "1989-06-01",
+      "description": "Soy una veterinaria experta en roedores"
+    }
+  ],
+  "advisors": [
+    {
+      "id": 1,
+      "occupation": "Veterinaria",
+      "experience": 5,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVRG1WxVcFjBUn9nB1zgLfr-tYL29QFd7F7tjlb38Uyg&s",
+      "rating": 4,
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "occupation": "Zootecnista",
+      "experience": 4,
+      "photo": "https://ctivitae.concytec.gob.pe/appDirectorioCTI/UploadFotoPath.do?tipo=visualizar_archivo&id_investigador=168811&ruta=/documents/docInvestigadores/168811/imagenes/img1555098896331.jpg&content_type=image/jpeg",
+      "rating": 5,
+      "user_id": 2
+    },
+    {
+      "id": 3,
+      "occupation": "Veterinaria",
+      "experience": 6,
+      "photo": "https://img.freepik.com/foto-gratis/veterinario-que-controla-salud-cachorro_23-2148728396.jpg",
+      "rating": 0,
+      "user_id": 6
+    }
+  ],
+  "breeders": [
+    {
+      "id": 1,
+      "user_id": 3
+    },
+    {
+      "id": 2,
+      "user_id": 4
+    },
+    {
+      "id": 3,
+      "user_id": 5
+    }
+  ],
+  "resources": [
+    {
+      "id": 1,
+      "name": "Alfalfa",
+      "type": "Alimento",
+      "breeder_id": 1,
+      "quantity": 3,
+      "date": "2021-05-20",
+      "observations": "Suplemento vitaminico"
+    },
+    {
+      "id": 2,
+      "name": "Trigo",
+      "type": "Produccion",
+      "breeder_id": 1,
+      "quantity": 1,
+      "date": "2024-05-02",
+      "observations": "Trigo para la producción de cuyes"
+    },
+    {
+      "id": 3,
+      "name": "Hierba medicinal",
+      "type": "Medicina",
+      "breeder_id": 1,
+      "quantity": 5,
+      "date": "2024-05-01",
+      "observations": "Hierba medicinal para los cuyes"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "breeder_id": 1,
+      "advisor_id": 1,
+      "date": "2024-04-29T15:30:00Z",
+      "status": "Terminado"
+    },
+    {
+      "id": 2,
+      "breeder_id": 1,
+      "advisor_id": 2,
+      "date": "2024-05-30T18:00:00Z",
+      "status": "Pendiente"
+    },
+    {
+      "id": 3,
+      "advisor_id": 1,
+      "breeder_id": 2,
+      "date": "2024-05-30T20:30:00.000Z",
+      "status": "Pendiente"
+    },
+    {
+      "id": 4,
+      "advisor_id": 1,
+      "breeder_id": 1,
+      "date": "2024-06-01T15:30:00.000Z",
+      "status": "Pendiente"
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "breeder_id": 1,
+      "type": "Alimento",
+      "amount": 500,
+      "date": "2024-05-02",
+      "details": "Se gastó en la compra de alimento para cuyes de todo el mes"
+    },
+    {
+      "id": 2,
+      "breeder_id": 1,
+      "type": "Alimento",
+      "amount": 10,
+      "date": "2024-05-01",
+      "details": "Se gastó en el almuerzo"
+    },
+    {
+      "id": 3,
+      "breeder_id": 1,
+      "type": "Alimento",
+      "amount": 10,
+      "date": "2024-05-08",
+      "details": "Se gastó en algunas semillas de trigo, alfalfa y heno. Ningún gasto adicional en todo el día."
+    },
+    {
+      "id": 4,
+      "breeder_id": 1,
+      "type": "Salud",
+      "amount": 100,
+      "date": "2024-05-18",
+      "details": "Pastillas para dormir a los cuyes inquietos"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "type": "Cita",
+      "text": "Tienes un asesoramiento programado con Marcus Smith",
+      "date": "2024-05-03T17:00:00Z",
+      "user_id": 3
+    },
+    {
+      "id": 2,
+      "type": "Cita",
+      "text": "Tienes un asesoramiento programado con Marcus Smith",
+      "date": "2024-05-06T19:00:00Z",
+      "user_id": 3
+    },
+    {
+      "id": 3,
+      "type": "Cita",
+      "text": "Tienes un asesoramiento programado a ofrecer para Luis Lopez",
+      "date": "2024-05-06T19:00:00Z",
+      "user_id": 1
+    },
+    {
+      "id": 4,
+      "type": "Cita",
+      "text": "Tienes un asesoramiento programado a ofrecer para Maria Jose Perez",
+      "date": "2024-05-06T19:00:00Z",
+      "user_id": 1
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "advisor_id": 1,
+      "title": "Cuidados básicos para cuyes",
+      "description": "Ofreciendo consejos esenciales para la crianza de cuyes. Desde la alimentación hasta la higiene, todo lo que necesitas saber para tener cuyes saludables. Verás que siguiendo mis consejos, lograrás maximizar la producción y rentabilidad de tu granja.",
+      "date": "2024-04-30T11:10:52Z",
+      "image": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2018/04/18/000497648W.jpg"
+    },
+    {
+      "id": 2,
+      "advisor_id": 1,
+      "title": "Cuida la salud de tu cuy",
+      "description": "Estoy ofreciendo consejos útiles para identificar síntomas y tratar enfermedades de cuyes. Programa tu cita conmigo para poder apoyarte",
+      "date": "2024-05-03T07:13:24Z",
+      "image": "https://t1.ea.ltmcdn.com/es/posts/5/1/6/como_saber_si_mi_cobaya_esta_enferma_23615_600.jpg"
+    },
+    {
+      "id": 3,
+      "advisor_id": 2,
+      "title": "Un cuy feliz es un cuy bien alimentado",
+      "description": "Ofrezco consejos para una alimentación balanceada y saludable para cuyes. Conoce los alimentos que debes darle a tu cuy para que crezca sano y fuerte. ¡Contáctame!",
+      "date": "2024-05-29T00:32:32Z",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRzv9RNLYjawtyba4mN9h8c98TNTqtWWCFQ&s"
+    }
+  ],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Cuyino",
+      "breed": "Kuri",
+      "gender": true,
+      "birthdate": "2023-12-10",
+      "cage_id": 1,
+      "weight": 0.8,
+      "status": "Saludable",
+      "observations": "Cuy macho de color marrón claro"
+    },
+    {
+      "id": 2,
+      "name": "Chispa",
+      "breed": "Andina",
+      "gender": false,
+      "birthdate": "2022-10-02",
+      "cage_id": 1,
+      "weight": 0.85,
+      "status": "Enfermo",
+      "observations": "Cuy hembra de color blanco con manchas negras"
+    },
+    {
+      "id": 3,
+      "name": "Pelusa",
+      "breed": "Perú",
+      "gender": true,
+      "birthdate": "2023-11-04",
+      "cage_id": 1,
+      "weight": 0.75,
+      "status": "Saludable",
+      "observations": "Cuy macho de color marrón claro"
+    },
+    {
+      "id": 4,
+      "name": "Canela",
+      "breed": "Andina",
+      "gender": false,
+      "birthdate": "2024-01-11",
+      "cage_id": 1,
+      "weight": 0.85,
+      "status": "Enfermo",
+      "observations": "Cuy hembra de color blanco con manchas negras"
+    },
+    {
+      "id": 5,
+      "name": "Chispa",
+      "breed": "Inti",
+      "gender": false,
+      "birthdate": "2023-04-11",
+      "cage_id": 1,
+      "weight": 100,
+      "status": "Saludable",
+      "observations": "Ninguna"
+    },
+    {
+      "id": 6,
+      "name": "Pepito",
+      "breed": "Kuri",
+      "gender": true,
+      "birthdate": "2024-04-02",
+      "cage_id": 2,
+      "weight": 2,
+      "status": "Saludable",
+      "observations": ""
+    },
+    {
+      "id": 7,
+      "name": "pepito",
+      "breed": "Inti",
+      "gender": true,
+      "birthdate": "2024-05-01",
+      "cage_id": 4,
+      "weight": 0.6,
+      "status": "Saludable",
+      "observations": "Pepito es juguetón"
+    }
+  ],
+  "cages": [
+    {
+      "id": 1,
+      "breeder_id": 1,
+      "name": "Jaula 1",
+      "size": 6,
+      "observations": "Sin observaciones"
+    },
+    {
+      "id": 2,
+      "breeder_id": 1,
+      "name": "Jaula 2",
+      "size": 3.6,
+      "observations": "La jaula esta un poco oxidada"
+    },
+    {
+      "id": 3,
+      "breeder_id": 1,
+      "name": "Jaula 3",
+      "size": "4",
+      "observations": "Una observación"
+    },
+    {
+      "id": 4,
+      "breeder_id": 2,
+      "name": "jaula M",
+      "size": "3",
+      "observations": "esta jaula tiene un hueco en la pared"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "appointment_id": 1,
+      "rating": 4,
+      "comment": "Excelente atención, muy recomendado."
+    },
+    {
+      "id": 2,
+      "appointment_id": 2,
+      "rating": 5,
+      "comment": "Muy buena atención, recomendado."
+    },
+    {
+      "id": 3,
+      "appointment_id": 3,
+      "comment": "Muy bueno",
+      "rating": 5
+    }
+  ],
+  "available_dates": [
+    {
+      "advisor_id": 2,
+      "date": "2024-02-28",
+      "start_time": "08:00",
+      "end_time": "10:00",
+      "status": 0,
+      "id": 2
+    },
+    {
+      "advisor_id": 1,
+      "date": "2024-04-30",
+      "start_time": "10:30",
+      "end_time": "12:30",
+      "status": 0,
+      "id": 3
+    },
+    {
+      "advisor_id": 2,
+      "date": "2024-02-27",
+      "start_time": "08:00",
+      "end_time": "10:00",
+      "status": 0,
+      "id": 4
+    },
+    {
+      "id": 6,
+      "advisor_id": 2,
+      "date": "2024-05-27",
+      "start_time": "08:00",
+      "end_time": "10:00",
+      "status": 1
+    },
+    {
+      "id": 7,
+      "advisor_id": 1,
+      "date": "2024-05-26",
+      "start_time": "11:00",
+      "end_time": "13:00",
+      "status": 1
+    },
+    {
+      "id": 8,
+      "advisor_id": 2,
+      "date": "2024-09-25",
+      "start_time": "13:00",
+      "end_time": "13:30",
+      "status": 1
+    }
+  ]
+}

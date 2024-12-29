@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="buttons">
+    <button mat-button style="color: #ffffff" class="button_only" (click)="navigateToAdvisorsSearch()">Explorar Asesores</button>
+    <button mat-button style="color: #ffffff" class="button_only" (click)="navigateToMyAdvisors()">Mis Asesores</button>
+  </div>
+  <h1 class="title-page"><strong>Bienvenid&#64; a Explorar Asesores</strong></h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar</mat-label>
+    <input matInput (input)="filter($event)">
+  </mat-form-field>
+
+  <div class="advisors-container">
+    <mat-card *ngFor="let advisor of advisors" class="mat-card">
+      <mat-card-header>
+        <div class="header-content">
+          <mat-card-title>
+            <div class="img-box">
+              <img [src]="advisor.photo" alt="Foto del asesor" class="photo">
+            </div>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <span class="title">{{ advisorDetails[advisor.userId]?.fullname }}</span>
+            <br><br>
+            <!-- Estrellas de rating existente -->
+            <span class="stars" *ngFor="let i of [].constructor(advisor.rating); let idx = index" [style.animation-delay]="idx * 0.2 + 's'">&#9733;</span>
+            <!-- Estrellas grises para rating faltante -->
+            <span class="gray-stars" *ngFor="let i of [].constructor(5 - advisor.rating)">&#9733;</span>
+          </mat-card-subtitle>
+          <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Flogo-circular.jpg?alt=media&token=51652ea1-b903-404e-9ca5-08189a1bd07d" alt="Icono de información" class="info-symbol" title="Asesor Certificado">
+        </div>
+      </mat-card-header>
+      <div class="more-info">
+        <h3>
+          <strong>Ubicación:</strong> {{ advisorDetails[advisor.userId]?.location }}
+          <br>
+          <strong>Experiencia:</strong> {{advisor.experience}} años
+        </h3>
+        <button mat-button style="color: white" class="card-button" (click)="navigateToAdvisorInfo(advisor.id)">Más Información</button>
+      </div>
+    </mat-card>
+  </div>
+</div>

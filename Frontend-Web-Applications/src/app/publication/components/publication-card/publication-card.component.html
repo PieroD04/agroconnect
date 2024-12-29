@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{publication.title}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{publication.description}}</p>
+    <img src="{{publication.image}}" alt="{{publication.title}}">
+  </mat-card-content>
+  <mat-card-footer class="row">
+      <button mat-flat-button (click)="getPublication(publication.id)">Ver publicación</button>
+  </mat-card-footer>
+</mat-card>

@@ -1,0 +1,31 @@
+<main>
+  <div>
+    <mat-card class="card" aria-label="Información de cita con cliente">
+      <div class="col" style="text-align: center; justify-content: center; align-items: center;">
+        <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-appointment.png?alt=media&token=96a10302-2750-4ef2-9212-c9ce3f16b2a2" alt="Imagen de cuy cita">
+      </div>
+      <div class="col">
+      <mat-card-header>
+        <mat-card-title>Detalles</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Información de cliente</p>
+        <ul>
+          <li>Nombre: {{client.fullname}}</li>
+          <li>Descripción: {{client.description}}</li>
+          <li>Cantidad de jaulas: {{client.cages}}</li>
+          <li>Ubicación: {{client.location}}</li>
+        </ul>
+        <p>Información de cita:</p>
+        <ul>
+          <li>Estado: {{client.appointmentStatus}}</li>
+          <li>Fecha programada de cita: {{appointment.date | date:'dd/MM/yyyy'}}</li>
+          <li>Hora programada de cita: {{appointment.date | date:'HH:mm'}}</li>
+        </ul>
+      </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+  <button mat-flat-button style="background-color: #7EC306; color: #FFFFFF"  (click)="goBack()">Volver</button>
+</main>
+

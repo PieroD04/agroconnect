@@ -1,0 +1,40 @@
+<main>
+  <h1>Crear nueva publicación</h1>
+  <div class="form">
+    <form [formGroup]="publicationForm" (ngSubmit)="onSubmit()" aria-label="Formulario para registrar nueva publicacion">
+      <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Nueva publicación" formControlName="title">
+        <mat-error *ngIf="publicationForm.get('title')?.hasError('required')">
+          El título es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput placeholder="Descripción" formControlName="description">
+        </textarea>
+        <mat-error *ngIf="publicationForm.get('description')?.hasError('required')">
+          La descripción es requerida
+        </mat-error>
+      </mat-form-field>
+      <div>
+        <input id="uploadImage" hidden (change)="uploadImage($event)" type="file" accept=".png, .jpg, .jpeg">
+        <label id="imageButton" for="uploadImage">
+          <mat-icon>image</mat-icon>
+           Subir imagen
+        </label>
+        <span *ngIf="selectedFileName" id="imageName">{{ selectedFileName }}</span>
+      </div>
+      <div class="row">
+        <button class="back-button" mat-flat-button color="warn" style="padding: 20px; background-color: #e19669; color: white;" (click)="goBack()">
+          <mat-icon>close</mat-icon>
+          Descartar
+        </button>
+        <button class="back-button" mat-flat-button style="padding: 20px; background-color: #7ec306; color: white;" [disabled]="!publicationForm.valid" type="submit">
+          <mat-icon>save</mat-icon>
+          Crear publicación
+        </button>
+      </div>
+    </form>
+  </div>
+</main>

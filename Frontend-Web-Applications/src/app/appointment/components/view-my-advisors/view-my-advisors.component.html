@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="buttons">
+    <button mat-button style="color: #ffffff" class="button_only" (click)="navigateToAdvisorsSearch()">Explorar Asesores</button>
+    <button mat-button style="color: #ffffff" class="button_only" (click)="navigateToMyAdvisors()">Mis Asesores</button>
+  </div>
+  <h1 class="title-page"><strong>Bienvenid&#64; a Mis Asesores</strong></h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar</mat-label>
+    <input matInput (input)="filter($event)">
+  </mat-form-field>
+
+  <div class="advisors-container">
+    <div *ngIf="filteredAdvisors.length > 0">
+      <ng-container *ngFor="let advisor of filteredAdvisors">
+        <mat-card *ngIf="getAppointmentsByAdvisor(advisor.id).length > 0" class="mat-card">
+          <mat-card-header>
+            <div class="header-content">
+              <mat-card-title>
+                <div class="img-box">
+                  <img [src]="advisor.photo" alt="Foto del asesor" class="photo">
+                </div>
+              </mat-card-title>
+              <mat-card-subtitle>
+                <span class="title">{{ advisorDetails[advisor.userId]?.fullname }}</span>
+                <br>
+                <h2 style="color: black" class="appointments-amount">Cantidad de citas con el asesor: {{ getAppointmentsByAdvisor(advisor.id).length }}</h2>
+              </mat-card-subtitle>
+              <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Flogo-circular.jpg?alt=media&token=51652ea1-b903-404e-9ca5-08189a1bd07d" alt="Icono de información" class="info-symbol" title="Asesor Certificado">
+            </div>
+          </mat-card-header>
+
+          <div class="more-info">
+            <div *ngFor="let appointment of getAppointmentsByAdvisor(advisor.id); let i = index">
+              <h2>
+                <strong>Cita Reservada {{ i + 1 }}:</strong>
+              </h2>
+              <h3>
+                <strong>Fecha de la cita:</strong> {{ formatDateTime(appointment.date) }}
+                <br>
+                <strong>Estado de la cita:</strong> {{ appointment.status }}
+              </h3>
+              <button mat-button style="color: white" class="{{appointment.status === 'TERMINADO' ? 'button-terminated' : 'button-other'}}" [disabled]="appointment.status !== 'TERMINADO'" (click)="giveReview(appointment.id)">Dejar Reseña</button>
+            </div>
+            <span style="color: #DD763D; font-size: 13px" class="note-message"><strong>
+              Nota: La cita debe estar TERMINADO para poder dejar una reseña.
+            </strong>
+            </span>
+          </div>
+        </mat-card>
+      </ng-container>
+    </div>
+    <div *ngIf="filteredAdvisors.length <= 0 || allAdvisorsAppointmentsReviewed()" class="error-container">
+      <span class="error-title">Usted aún no ha reservado ninguna cita con ningún asesor</span>
+      <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fguinea-pig-not-found.png?alt=media&token=8006834d-9b88-4d02-9556-7f6be5cb4a59" alt="Error Image" class="error-image">
+    </div>
+  </div>
+
+</div>

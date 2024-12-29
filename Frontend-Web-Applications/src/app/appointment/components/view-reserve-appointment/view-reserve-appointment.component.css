@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.title {
+  color: #DD763D;
+  margin-top: 1px;
+  padding: 20px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.date-card {
+  width: 100%;
+  margin: 15px auto auto;
+  border: 2px solid;
+  border-image-source: linear-gradient(to right, orange, rgba(240, 218, 139, 94), orange);
+  border-image-slice: 1;
+}
+
+.card-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.card-image{
+  width: 80%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-button {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.custom-button:first-child {
+  margin-right: 40px;
+}
+
+/*Confirmation Dialog*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.confirmation-image{
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
+
+.error-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.error-title{
+  font-size: 2em;
+  font-weight: bold;
+}
+.error-image{
+  text-align: center;
+  width: 100px;
+  height: auto;
+}
+
+/*Responsive*/
+@media (max-width: 600px) {
+  .error-title, .title {
+    text-align: center;
+    line-height: 1;
+  }
+
+  .card-content{
+    grid-template-columns: 1fr;
+  }
+
+  .custom-button {
+    width: 100px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .error-title, .title {
+    text-align: center;
+    line-height: 1;
+  }
+}

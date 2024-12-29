@@ -1,0 +1,48 @@
+mat-card {
+  background-color: #e19669;
+  color: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+
+mat-card-title{
+  color: #F0DA8B;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 0;
+  width: 84px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+}
+
+img {
+  width: 100px;
+  height: 100px
+}
+
+@media (max-width: 425px) {
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}

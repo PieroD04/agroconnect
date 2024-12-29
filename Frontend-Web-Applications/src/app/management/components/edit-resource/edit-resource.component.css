@@ -1,0 +1,109 @@
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitle h2 {
+  color: #DD763D;
+  font-size: 36px;
+}
+
+.image {
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+
+.image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px 0 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  justify-content: flex-start;
+  color: #4F2F00;
+}
+
+.group-inputs {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.group-btns button {
+  font-size: 25px;
+  background-color: #DD763D;
+  padding: 30px 40px;
+}
+
+.group-btns {
+  display: flex;
+  gap: 100px;
+}
+
+.container-confirmation-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-label {
+  color: #4F2F00;
+}
+
+mat-radio-group h2 {
+  color: #4F2F00;
+}
+
+.mat-radio-button {
+  --mdc-radio-label-text-color: #4F2F00;
+}
+
+input{
+  color: #4F2F00;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  border-radius: 35px;
+}
+
+.register-button {
+  margin-top: 20px;
+  padding: 25px 40px;
+  font-size: 24px;
+  height: 50px;
+  margin-right: 25px;
+  border-radius: 35px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    margin-top: 100px;
+  }
+  .group-inputs {
+    width: 90%;
+  }
+  .group-btns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}

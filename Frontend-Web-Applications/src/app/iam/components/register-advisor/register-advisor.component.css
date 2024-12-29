@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container mat-card {
+  width: 50%;
+  padding: 20px;
+}
+
+.register-user {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+}
+
+.register-user mat-form-field {
+  width: 100%;
+  --mdc-outlined-text-field-focus-outline-color: #7ec306;
+  --mdc-outlined-text-field-focus-label-text-color: #7ec306;
+}
+
+button{
+  width: 60%;
+  height: 40px;
+  margin: 12px;
+}
+
+button:enabled{
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 5px;
+  text-align: center;
+  color: #DD763D;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+
+.register-user input {
+  width: 100%;
+}
+
+#imageName {
+  margin-left: 10px;
+}
+
+#imageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DB6E36;
+  color: #FFFFFF;
+  padding: 15px;
+  border-radius: 35px;
+  text-align: center;
+  align-content: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+
+@media (max-width: 850px) {
+  .container mat-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container mat-card {
+    width: 100%;
+  }
+}

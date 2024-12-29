@@ -1,0 +1,51 @@
+<div class="tabla" aria-label="tabla de jaulas">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Size Column -->
+    <ng-container matColumnDef="size">
+      <th mat-header-cell *matHeaderCellDef> Tamaño </th>
+      <td mat-cell *matCellDef="let element"> {{element.size}} m<sup>3</sup> </td>
+    </ng-container>
+
+    <!-- Observations Column -->
+    <ng-container matColumnDef="observations">
+      <th mat-header-cell *matHeaderCellDef> Observaciones </th>
+      <td mat-cell *matCellDef="let element"> {{element.observations}} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element" class="actions">
+        <button mat-flat-button aria-label="Ver animales" (click)="goToCage.emit(element.id)">
+          <mat-icon>search</mat-icon>
+          <span class="button-text">Ver</span>
+        </button>
+        <button mat-flat-button aria-label="Editar jaula" (click)="editCage.emit(element.id)">
+          <mat-icon>edit</mat-icon>
+          <span class="button-text">Editar</span>
+        </button>
+        <button mat-flat-button aria-label="Borrar jaula" color="warn" (click)="deleteCage.emit(element.id)">
+          <mat-icon>delete</mat-icon>
+          <span class="button-text">Borrar</span>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="paginator">
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

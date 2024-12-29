@@ -1,0 +1,201 @@
+.resource-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5% 0%;
+  height: 100%;
+  width: 100%;
+  background: #F5EEDC;
+}
+
+.resource-container h1 {
+  font-size: 2rem;
+  color: #DD763D;
+  font-weight: bold;
+}
+
+.selector-resource {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0px;
+  width: 70%;
+  color: #4F2F00;
+}
+
+.selector-resource .mat-mdc-radio-button {
+  --mdc-form-field-label-text-color: #4F2F00;
+}
+
+.selector-resource p {
+  margin: 0 20px 0 0;
+}
+
+.filter-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button {
+  background-color: #DD763D;
+  border-radius: 35px;
+  padding: 20px 30px;
+  margin: 0 0 20px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.button-container button {
+  flex: 0 0 auto;
+  min-width: 100px;
+}
+
+.button-container h1 {
+  margin-right: 15px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: auto;
+  background-color: #f2e2a8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  background-color: #e19669;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 20%;
+  height: 100%;
+  margin: 0 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #F4D97C;
+  font-weight: bold;
+}
+
+.image {
+  height: 150px;
+}
+
+.image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-subtitle {
+  font-size: 1.5rem;
+  color: #4F2F00;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.card-button {
+  background: #DD763D;
+  border-radius: 35px;
+  padding: 20px;
+  width: 200px;
+  margin: 0 20px 0 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.math-card-content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  text-align: justify;
+}
+
+mat-card-actions button {
+  margin: 0px 5px;
+}
+
+@media screen and (max-width: 1670px) {
+  .resource-container {
+    height: 100%;
+    margin: 100px 0%;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1265px) {
+  .button-container {
+    width: 90%;
+  }
+
+  .mat-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .selector-resource {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .resource-container h1 {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+
+  .selector-resource {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .mat-card-content {
+    flex-direction: column;
+  }
+
+  .math-card-content-column {
+    width: 80%;
+  }
+
+  .title {
+    flex-direction: row;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+}

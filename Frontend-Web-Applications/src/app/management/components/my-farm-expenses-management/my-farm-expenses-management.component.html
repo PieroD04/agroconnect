@@ -1,0 +1,60 @@
+<div class="resource-view">
+  <div class="resource-container">
+    <div class="button-container">
+      <button mat-raised-button style="padding: 15px; background-color: #DD763D; color: white;" aria-label="button back to MyFarmView" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-raised-button style="padding: 15px; background-color: #7ec306; color: white;" routerLink="/criador/registro/gasto">
+        Nuevo gasto
+      </button>
+    </div>
+
+    <h1>FILTRAR GASTOS REALIZADOS</h1>
+
+    <div class="selector-resource">
+      <p>Seleccione un tipo de recurso</p>
+      <mat-radio-group [(ngModel)]="selectedResourceType" aria-label="Select an option" class="selector-resource-option">
+        <mat-radio-button value="1" color="warn">Todos</mat-radio-button>
+        <mat-radio-button value="2" color="warn">Salud</mat-radio-button>
+        <mat-radio-button value="3" color="warn">Alimento</mat-radio-button>
+        <mat-radio-button value="4" color="warn">Mantenimiento de criadero</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <button mat-button style="color: #ffffff" class="card-button" (click)="filterResource()">Filtrar</button>
+
+    <!-- Iteration for -->
+    <div class="card-container" *ngFor="let result of filteredExpenses">
+      <mat-card class="mat-card">
+        <div class="mat-card-content">
+          <div class="title">
+            <mat-card-title class="card-title">GASTO</mat-card-title>
+            <div class="image">
+              <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fexpenses.png?alt=media&token=1f1e2234-78bc-4118-aeff-c99015bce58b" alt="Expense icon" class="card-image">
+            </div>
+          </div>
+          <div class="math-card-content-column">
+            <mat-card-subtitle class="card-subtitle">Nombre: {{ result.name }}</mat-card-subtitle>
+            <mat-card-subtitle class="card-subtitle">Monto Gastado: S/.{{ result.amount }}</mat-card-subtitle>
+            <mat-card-subtitle class="card-subtitle">Tipo: {{ result.type }}</mat-card-subtitle>
+            <mat-card-subtitle class="card-subtitle">Fecha: {{ result.date }}</mat-card-subtitle>
+            <mat-card-subtitle class="card-subtitle">Detalle: {{ result.observations }}</mat-card-subtitle>
+          </div>
+          <mat-card-actions>
+            <button mat-button type="button" class="edit-button" aria-label="This is an edit button" style="color: white; background-color: #7ec306;" (click)="editItem(result.id)">
+              <mat-icon style="color: white;">edit</mat-icon>
+              Edit
+            </button>
+            <button mat-button type="button" class="edit-button" aria-label="This is a delete button" style="color: white; background-color: #F44336;" (click)="deleteItem(result.id)">
+              <mat-icon style="color: white;">delete</mat-icon>
+              Delete
+            </button>
+          </mat-card-actions>
+        </div>
+      </mat-card>
+    </div>
+
+    <app-empty-view *ngIf="filteredExpenses.length === 0" [title]="'No hay ningún registro con esas características'"></app-empty-view>
+  </div>
+</div>
+

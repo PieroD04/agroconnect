@@ -1,0 +1,39 @@
+
+<div class="container">
+  <h1 class="title"><strong>Reservar Cita - Elegir Horario</strong></h1>
+  <div *ngIf="advisor_availableDates.length > 0">
+    <ng-container *ngFor="let availableDate of advisor_availableDates ; let i = index">
+      <div class="date-card-container">
+        <mat-radio-group (change)="setSelectedDateIndex($event.value)">
+          <mat-card class="date-card">
+            <mat-card-content>
+              <div class="card-content">
+                <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-appointment.png?alt=media&token=96a10302-2750-4ef2-9212-c9ce3f16b2a2" alt="Imagen Deco" class="card-image">
+                <div class="info-container">
+                  <h1><strong>Fecha:</strong> {{availableDate.date}}</h1>
+                  <h1><strong>Hora Inicio:</strong> {{availableDate.startTime}}</h1>
+                  <h1><strong>Hora Fin:</strong> {{availableDate.endTime}}</h1>
+                  <h1><strong>Estado: </strong>{{getStatusText(availableDate.status)}}</h1>
+                </div>
+              </div>
+              <mat-radio-button [disabled]="availableDate.status === 0" [value]="i">
+                <strong>Reservar Horario</strong>
+              </mat-radio-button>
+
+            </mat-card-content>
+          </mat-card>
+        </mat-radio-group>
+      </div>
+    </ng-container>
+    <div class="button-container">
+      <button mat-raised-button color="warn" class="custom-button" (click)="cancel()">Cancelar</button>
+      <button mat-raised-button style="color: white; background-color: #7ec346" class="custom-button" (click)="createAppointment()">Reservar</button>
+    </div>
+  </div>
+
+  <div *ngIf="advisor_availableDates.length === 0" class="error-container">
+    <span class="error-title">El asesor no tiene horarios disponibles</span>
+    <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fguinea-pig-not-found.png?alt=media&token=8006834d-9b88-4d02-9556-7f6be5cb4a59" alt="Error Image" class="error-image">
+    <button mat-raised-button style="color: white; background-color: #DD763D" class="custom-button" (click)="cancel()">Volver al Inicio</button>
+  </div>
+</div>

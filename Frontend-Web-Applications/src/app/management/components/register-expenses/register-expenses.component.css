@@ -1,0 +1,54 @@
+.subtitle h2 {
+  color: #DD763D;
+  font-size: 36px;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.container {
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.group-inputs {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.group-btns button {
+  font-size: 25px;
+  background-color: #DD763D;
+  padding: 30px 40px;
+}
+
+.group-btns {
+  display: flex;
+  gap: 100px;
+}
+
+.container-confirmation-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .group-inputs, .group-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group-btns {
+    gap: 20px;
+  }
+}

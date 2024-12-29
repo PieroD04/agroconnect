@@ -1,0 +1,19 @@
+<mat-card class="publication-card">
+  <mat-card-header>
+  </mat-card-header>
+  <img mat-card-image src="{{publication.image}}" alt="{{publication.title}}">
+  <mat-card-title style="text-align: center;">
+    {{publication.title}}
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{publication.description}}</p>
+    <p>Publicado el {{publication.date | date: 'dd/MM/yy'}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button style="background-color: #e19669; color: #FFFFFF" (click)="goToAdvisor()">
+      <mat-icon>person</mat-icon>
+      Ver perfil de asesor
+    </button>
+  </mat-card-actions>
+</mat-card>
+

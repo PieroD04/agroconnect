@@ -1,0 +1,79 @@
+
+<button mat-raised-button class="back-button" style="background-color: #DD763D;border-radius: 35px; color:white; font-size: 20px; z-index: 0;" (click)="goBack()">&#8592;</button>
+
+<div class="container" *ngIf="advisor">
+  <mat-card class="advisor-card">
+    <div class="advisor-photo">
+
+      <mat-card-header>
+        <mat-card-subtitle>
+          <img [src]="advisor.photo" alt="Foto del asesor" class="photo">
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <button mat-raised-button style="color: white; background-color: #DD763D" (click)="NavigateToReserveAppointment()">Reservar Cita</button>
+      </mat-card-actions>
+    </div>
+
+    <div class="advisor-info">
+      <mat-card-header>
+        <mat-card-title>
+          <span style="font-size: 30px"><strong>{{ advisorDetails.fullname }}</strong></span>
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h3>
+          <strong>Ubicación: </strong>{{ advisorDetails.location }}
+          <br>
+          <strong>Ocupación: </strong>{{ advisorDetails.occupation }}
+          <br>
+          <strong>Experiencia: </strong>{{advisor.experience}} año(s)
+          <br>
+          <strong>Descripción: </strong><br>{{ advisorDetails.description }}
+        </h3>
+
+        <div class="container-stars">
+          <h2>
+          <span class="stars" *ngFor="let i of [].constructor(advisor.rating); let idx = index" [style.animation-delay]="idx * 0.2 + 's'">&#9733;</span>
+            <span class="gray-stars" *ngFor="let i of [].constructor(5 - advisor.rating)">&#9733;</span>
+          </h2>
+        </div>
+      </mat-card-content>
+    </div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Flogo-circular.jpg?alt=media&token=51652ea1-b903-404e-9ca5-08189a1bd07d" alt="Icono" class="card-icon" title="Asesor Certificado">
+  </mat-card>
+
+  <h2 class="title_review"><strong>Reseñas</strong></h2>
+
+  <div class="reviews">
+    <div *ngIf="reviews.length > 0">
+      <ng-container *ngFor="let review of reviews">
+        <mat-card class="review-card">
+          <div class="card-content">
+            <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-reseñas-asesor.jpg?alt=media&token=c3975324-ad25-46d5-9a15-e5ae44989291" alt="Imagen de la reseña" class="card-image">
+            <div class="info-container">
+              <mat-card-header>
+                <mat-card-title>
+                  <span class="rating" style="color: #DD763D; font-size: 50px;" *ngFor="let i of [].constructor(review.rating); let idx = index" [style.animation-delay]="idx * 0.2 + 's'">&#9733;</span>
+                  <span style="color:gray; font-size: 50px" *ngFor="let i of [].constructor(5 - review.rating)">&#9733;</span>
+                </mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>{{ review.comment }}</p>
+              </mat-card-content>
+            </div>
+          </div>
+        </mat-card>
+      </ng-container>
+    </div>
+    <div *ngIf="reviews.length === 0">
+        <div class="error-container">
+          <span class="error-title">El asesor no tiene reseñas actualmente</span>
+          <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fguinea-pig-not-found.png?alt=media&token=8006834d-9b88-4d02-9556-7f6be5cb4a59" alt="Error Image" class="error-image">
+        </div>
+    </div>
+  </div>
+</div>

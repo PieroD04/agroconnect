@@ -1,0 +1,12 @@
+<main>
+  <span class="title-page"><strong>Mis Publicaciones</strong></span>
+  <button mat-flat-button style="background-color: #7EC306; color: #FFFFFF" (click)="goToCreatePublication()">Crear nueva publicación</button>
+  <div id="cards">
+    <div class="card" *ngFor="let publication of publications" aria-label="Publicaciones registradas por asesor">
+      <publication-card [publication]="publication"></publication-card>
+    </div>
+  </div>
+  <div class="empty-view">
+    <app-empty-view *ngIf="publications.length === 0" [title]="'No tienes publicaciones para mostrar.'"></app-empty-view>
+  </div>
+</main>

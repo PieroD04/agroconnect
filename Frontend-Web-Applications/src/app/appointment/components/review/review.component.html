@@ -1,0 +1,54 @@
+<div class="container">
+  <h1 class="title-page"><strong>Dejar Reseña al Asesor</strong></h1>
+
+  <mat-card class="review-card">
+    <div class="review-photo">
+      <mat-card-header>
+        <mat-card-subtitle>
+          <img [src]="advisor.photo" alt="Foto del asesor" class="photo">
+        </mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <div class="review-content">
+      <mat-card-header>
+        <mat-card-title>
+          <span style="font-size: 30px"><strong>Reseña a {{ advisorDetails.fullname }}</strong></span>
+        </mat-card-title>
+      </mat-card-header>
+
+      <form (submit)="onSubmit()" #cageForm = "ngForm" aria-label="formulario para reseñar a un asesor" class="form">
+        <mat-form-field class="form-field" style="width: 300px">
+          <mat-label>Comentario</mat-label>
+          <input matInput class="input" placeholder="Comentario" name="reviewComment" [(ngModel)]="review.comment">
+        </mat-form-field>
+
+        <div class="rating-content">
+          <span style="padding-left: 5px;">Calificación en Estrellas</span>
+          <div class="star-rating">
+            <button type="button" *ngFor="let star of stars; index as i" (click)="onStarClick(i)">
+              <mat-icon [class.selected]="star">{{ star ? 'star' : 'star_border' }}</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button mat-raised-button color="warn" aria-label="descartar cambios" type="button" (click)="onCancel()">Cancelar</button>
+          <button mat-raised-button style="background-color: #7ec306; color:white;" aria-label="guardar cambios" type="submit">Enviar Reseña</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+
+  <span class="title-frase"><strong>Tus reseñas ayudan a nuestros asesores a ofrecerte el mejor servicio posible</strong></span>
+  <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuys-reseña.png?alt=media&token=5b9c363f-a90e-4c08-a55d-913176576c19" alt="Imagen Frase" class="photo-frase">
+</div>
+
+<div class="overlay" *ngIf="isConfirmed">
+  <mat-card>
+    <div class="confirmation-card">
+      <h1><strong>Reseña Enviada con Éxito</strong></h1>
+      <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy_confirmacion_appointment.png?alt=media&token=95037b66-963b-4cb7-a1d9-f58cfc75fd72" alt="Imagen Deco" class="confirmation-image">
+      <button mat-raised-button style="background-color: #DD763D; color: white" (click)="goHome()">Volver al Inicio</button>
+    </div>
+  </mat-card>
+</div>

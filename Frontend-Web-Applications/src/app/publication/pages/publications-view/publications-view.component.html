@@ -1,0 +1,8 @@
+<main>
+  <div class="publications">
+    <div class="card" *ngFor="let publication of publications" aria-label="Publicaciones registradas por asesor">
+      <publication-readonly-card [publication]="publication"></publication-readonly-card>
+    </div>
+  </div>
+  <app-empty-view *ngIf="publications.length === 0" [title]="'No hay publicaciones para mostrar por el momento.'"></app-empty-view>
+</main>

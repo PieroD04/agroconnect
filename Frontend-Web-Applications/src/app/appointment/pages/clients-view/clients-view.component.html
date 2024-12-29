@@ -1,0 +1,12 @@
+<main>
+  <span class="title-page"><strong>Mis Clientes</strong></span>
+  <div class="cards">
+    <div class="card" *ngFor="let client of clients">
+      <client-card [client]="client"></client-card>
+    </div>
+  </div>
+
+  <div class="empty-view">
+    <app-empty-view *ngIf="clients.length === 0" [title]="'Aún no tienes ningún cliente para mostrar.'"></app-empty-view>
+  </div>
+</main>

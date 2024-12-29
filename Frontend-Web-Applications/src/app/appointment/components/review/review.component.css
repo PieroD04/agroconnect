@@ -1,0 +1,125 @@
+.title-page {
+  color: #DD763D;
+  padding-top: 100px;
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.star-rating {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.star-rating button {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.star-rating .selected {
+  color: #DD763D;
+}
+
+.review-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  width: 65%;
+
+  border: 2px solid;
+  border-image-source: linear-gradient(to right, orange, rgba(240, 218, 139, 94), orange);
+  border-image-slice: 1;
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .review-photo, .review-content {
+    flex: none;
+  }
+}
+
+.review-photo {
+  flex: 1;
+}
+
+.review-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.photo{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.form{
+  padding-left: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button:first-child {
+  margin-right: 10px;
+}
+
+.rating-content span {
+  font-size: 1.2em;
+}
+
+.title-frase {
+  color: #DD763D;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  display: block;
+}
+
+.photo-frase {
+  display: block;
+  margin: auto;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.confirmation-image{
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
+

@@ -1,0 +1,176 @@
+.container{
+  margin-top: 200px;
+}
+
+.back-button {
+  position: absolute;
+  margin-top: 110px;
+}
+
+.advisor-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 110px auto auto;
+  width: 70%;
+  box-sizing: border-box;
+  background: rgba(240, 218, 139, 94) url("https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-transparente.png?alt=media&token=71d711de-1745-4332-9330-956e0504aa8f") no-repeat right center;
+
+  border: 4px solid;
+  border-image-source: linear-gradient(to right, orange, rgba(240, 218, 139, 94), orange);
+  border-image-slice: 1;
+}
+
+.advisor-photo, .advisor-info {
+  max-width: 50%;
+  overflow: auto;
+}
+.photo{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+.advisor-photo {
+  margin-right: 20px;
+}
+
+button {
+  margin-left:65px;
+  margin-bottom: 5px;
+}
+
+.container-stars{
+  padding-top: 15px;
+}
+.stars{
+  font-size: 70px;
+  color: #DD763D;
+}
+.gray-stars {
+  font-size: 70px;
+  color: gray;
+}
+
+.title_review {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  color: #DD763D;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-card {
+  border: 2px solid;
+  border-image-source: linear-gradient(to right, orange, rgba(240, 218, 139, 94), orange);
+  border-image-slice: 1;
+  width: 45%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-image {
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 50%;
+  width: 70px;
+  height: 50px;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@keyframes star-animation {
+  0% { color: #DC763C; }
+  50% { color: #FFD700; }
+  100% { color: #DC763C; }
+}
+
+.rating{
+  animation: star-animation 1s infinite;
+}
+
+.error-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.error-title{
+  font-size: 2em;
+  font-weight: bold;
+}
+.error-image{
+  text-align: center;
+  width: 100px;
+  height: auto;
+}
+
+.back-button {
+  position: absolute;
+  margin-top: 110px;
+  z-index: 1;
+}
+@media screen and (max-width: 900px) {
+  .advisor-card{
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .advisor-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advisor-photo, .advisor-info{
+    max-width: 90%;
+  }
+
+  .stars{
+    font-size: 50px;
+    color: #DD763D;
+  }
+  .gray-stars {
+    font-size: 50px;
+    color: gray;
+  }
+}
+
+@media screen and (max-width: 700px)
+{
+  .review-card{
+    width: 70%;
+  }
+}
